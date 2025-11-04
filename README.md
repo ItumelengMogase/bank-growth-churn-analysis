@@ -18,7 +18,7 @@ Built using **Python**, **SQL**, and **dbt-style transformations**, this case st
 ## Setup Instructions
 
 ### Clone this repository
-```bash
+
 git clone https://github.com/<your-username>/bank-growth-churn-analysis.git
 cd bank-growth-churn-analysis
 
