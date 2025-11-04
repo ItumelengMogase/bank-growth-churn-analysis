@@ -1,4 +1,3 @@
-```markdown
 # Bank Growth & Churn Analysis — Senior Data Analyst Case Study
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
@@ -10,18 +9,17 @@
 ---
 
 **Summary:**  
-End-to-end analytics and visual storytelling project exploring **user acquisition, engagement, churn, and LTV:CAC performance** for a digital bank.  
-Built using **Python, SQL, and dbt-style transformations**, this case study demonstrates strong data storytelling and metric-driven insights.
+End-to-end analytics and storytelling project exploring **user acquisition, engagement, churn, and LTV:CAC performance** for a digital bank.  
+Built using **Python**, **SQL**, and **dbt-style transformations**, this case study highlights data storytelling, pipeline design, and metric-driven insight generation.
 
 ---
 
-## Repository Structure
+## 🗂️ Repository Structure
 
-```
-
+```bash
 bank-growth-churn-analysis/
 │
-├── data/                       # Raw CSVs
+├── data/                       # Raw CSVs (excluded from GitHub)
 │   ├── user_acquisition.csv
 │   ├── user_activity.csv
 │   ├── transactions.csv
@@ -51,7 +49,7 @@ bank-growth-churn-analysis/
 │   ├── storytelling_visuals.pystorytelling_visuals.py
 │   └── load_data.py
 │
-├── notebooks/                  # Optional notebook for exploration
+├── notebooks/                  # Optional exploratory analysis
 │   └── analysis.ipynb
 │
 ├── dbt_project.yml             # dbt configuration file
@@ -59,8 +57,6 @@ bank-growth-churn-analysis/
 ├── README.md
 ├── .gitignore
 └── LICENSE
-
-````
 
 ---
 
