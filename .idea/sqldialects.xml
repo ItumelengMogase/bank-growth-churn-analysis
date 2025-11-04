@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/dbt_project" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/sql/01_context_setup.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/02_choose_appropriate_visuals.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/03_eliminate_clutter.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/cac_conversion_by_channel.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/churn_composition_dormant_by_channel.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/executive_numbers.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/ltv_by_channel_user_level.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/ltv_proxy.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/sql/monthly_churn.sql" dialect="PostgreSQL" />
+  </component>
+</project>

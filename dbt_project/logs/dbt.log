@@ -1,0 +1,1801 @@
+[0m13:06:51.338376 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83F7DF0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83B567390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83D50FC50>]}
+
+
+============================== 13:06:51.346912 | 7780b935-cce3-4560-b89f-b6f4f6c17f4e ==============================
+[0m13:06:51.346912 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:06:51.348480 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt build', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'warn_error': 'None', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m13:06:51.866791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D83FD20C30>]}
+[0m13:06:52.088606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D841ACB240>]}
+[0m13:06:52.090594 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m13:06:52.740988 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m13:06:52.742788 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:06:52.743720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D841A3DB50>]}
+[0m13:06:54.851160 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D841AB4E60>]}
+[0m13:06:54.987572 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:06:54.993621 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:06:55.086567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D841AD98D0>]}
+[0m13:06:55.087716 [info ] [MainThread]: Found 1 model, 447 macros
+[0m13:06:55.092385 [info ] [MainThread]: 
+[0m13:06:55.093593 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:06:55.094497 [info ] [MainThread]: 
+[0m13:06:55.095472 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:06:55.098014 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m13:06:55.292360 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m13:06:55.293517 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:06:55.294270 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:55.475832 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.181 seconds
+[0m13:06:55.478511 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m13:06:55.480121 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_bank_analytics, now create_bank_analytics_analytics_analytics)
+[0m13:06:55.481349 [debug] [ThreadPool]: Creating schema "database: "bank_analytics"
+schema: "analytics_analytics"
+"
+[0m13:06:55.491103 [debug] [ThreadPool]: Using postgres connection "create_bank_analytics_analytics_analytics"
+[0m13:06:55.491892 [debug] [ThreadPool]: On create_bank_analytics_analytics_analytics: BEGIN
+[0m13:06:55.492501 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:06:55.617366 [debug] [ThreadPool]: SQL status: BEGIN in 0.125 seconds
+[0m13:06:55.618253 [debug] [ThreadPool]: Using postgres connection "create_bank_analytics_analytics_analytics"
+[0m13:06:55.619262 [debug] [ThreadPool]: On create_bank_analytics_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "create_bank_analytics_analytics_analytics"} */
+create schema if not exists "analytics_analytics"
+[0m13:06:55.632079 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.012 seconds
+[0m13:06:55.634303 [debug] [ThreadPool]: On create_bank_analytics_analytics_analytics: COMMIT
+[0m13:06:55.635087 [debug] [ThreadPool]: Using postgres connection "create_bank_analytics_analytics_analytics"
+[0m13:06:55.635767 [debug] [ThreadPool]: On create_bank_analytics_analytics_analytics: COMMIT
+[0m13:06:55.638455 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m13:06:55.639249 [debug] [ThreadPool]: On create_bank_analytics_analytics_analytics: Close
+[0m13:06:55.642179 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics_analytics'
+[0m13:06:55.660200 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics_analytics"
+[0m13:06:55.661498 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: BEGIN
+[0m13:06:55.662446 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:55.790071 [debug] [ThreadPool]: SQL status: BEGIN in 0.128 seconds
+[0m13:06:55.790903 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics_analytics"
+[0m13:06:55.791676 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m13:06:55.836091 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.044 seconds
+[0m13:06:55.839755 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: ROLLBACK
+[0m13:06:55.840981 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: Close
+[0m13:06:55.851362 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:55.852294 [debug] [MainThread]: On master: BEGIN
+[0m13:06:55.853146 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:06:55.984027 [debug] [MainThread]: SQL status: BEGIN in 0.131 seconds
+[0m13:06:55.984851 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:55.985847 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:06:56.016995 [debug] [MainThread]: SQL status: SELECT 1 in 0.030 seconds
+[0m13:06:56.019572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8423AEB60>]}
+[0m13:06:56.020654 [debug] [MainThread]: On master: ROLLBACK
+[0m13:06:56.021881 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:56.022653 [debug] [MainThread]: On master: BEGIN
+[0m13:06:56.024230 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m13:06:56.025003 [debug] [MainThread]: On master: COMMIT
+[0m13:06:56.025710 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:56.026359 [debug] [MainThread]: On master: COMMIT
+[0m13:06:56.027401 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:06:56.028136 [debug] [MainThread]: On master: Close
+[0m13:06:56.117634 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m13:06:56.118927 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_analytics.staging__churn ................ [RUN]
+[0m13:06:56.120204 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m13:06:56.121159 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m13:06:56.142648 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m13:06:56.147966 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m13:06:56.234248 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m13:06:56.238582 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:06:56.239422 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m13:06:56.240220 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:06:56.354931 [debug] [Thread-1 (]: SQL status: BEGIN in 0.115 seconds
+[0m13:06:56.355807 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:06:56.356611 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics_analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/staging__churn.sql
+
+
+with base as (
+    select
+      month::date,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / total_users_start) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / total_users_start) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+order by month;
+  );
+  
+[0m13:06:56.365714 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near ";"
+LINE 30: order by month;
+                       ^
+
+[0m13:06:56.366604 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: ROLLBACK
+[0m13:06:56.368018 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m13:06:56.437944 [debug] [Thread-1 (]: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:06:56.442528 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7780b935-cce3-4560-b89f-b6f4f6c17f4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D84213E8D0>]}
+[0m13:06:56.443962 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics_analytics.staging__churn ....... [[31mERROR[0m in 0.32s]
+[0m13:06:56.445438 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m13:06:56.446719 [debug] [Thread-4 (]: Marking all children of 'model.bank_analytics_dbt.staging__churn' to be skipped because of status 'error'.  Reason: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql.
+[0m13:06:56.450057 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:56.451149 [debug] [MainThread]: On master: BEGIN
+[0m13:06:56.452039 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:06:56.665731 [debug] [MainThread]: SQL status: BEGIN in 0.214 seconds
+[0m13:06:56.666772 [debug] [MainThread]: On master: COMMIT
+[0m13:06:56.667506 [debug] [MainThread]: Using postgres connection "master"
+[0m13:06:56.668140 [debug] [MainThread]: On master: COMMIT
+[0m13:06:56.669157 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:06:56.669880 [debug] [MainThread]: On master: Close
+[0m13:06:56.670865 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:06:56.671491 [debug] [MainThread]: Connection 'create_bank_analytics_analytics_analytics' was properly closed.
+[0m13:06:56.672310 [debug] [MainThread]: Connection 'list_bank_analytics_analytics_analytics' was properly closed.
+[0m13:06:56.672897 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m13:06:56.673524 [info ] [MainThread]: 
+[0m13:06:56.674247 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.58 seconds (1.58s).
+[0m13:06:56.676399 [debug] [MainThread]: Command end result
+[0m13:06:56.719980 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:06:56.724563 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:06:56.736640 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m13:06:56.737805 [info ] [MainThread]: 
+[0m13:06:56.739132 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:06:56.740423 [info ] [MainThread]: 
+[0m13:06:56.741698 [error] [MainThread]: [31mFailure in model staging__churn (models\staging__churn.sql)[0m
+[0m13:06:56.742547 [error] [MainThread]:   Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:06:56.743235 [info ] [MainThread]: 
+[0m13:06:56.744055 [info ] [MainThread]:   compiled code at target\compiled\bank_analytics_dbt\models\staging__churn.sql
+[0m13:06:56.744724 [info ] [MainThread]: 
+[0m13:06:56.745414 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:06:56.747038 [debug] [MainThread]: Command `dbt build` failed at 13:06:56.746805 after 5.74 seconds
+[0m13:06:56.747781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8421A8730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8421E4F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D8421E4FF0>]}
+[0m13:06:56.748490 [debug] [MainThread]: Flushing usage events
+[0m13:06:58.635016 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:19:04.911509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB906A2E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB8C3A7390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB8E3ABB10>]}
+
+
+============================== 13:19:04.918945 | 4565d2e6-8782-4b1e-bda7-a2707058d15d ==============================
+[0m13:19:04.918945 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:19:04.920186 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'cache_selected_only': 'False', 'no_print': 'None', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'printer_width': '80', 'write_json': 'True'}
+[0m13:19:04.946748 [info ] [MainThread]: dbt version: 1.10.13
+[0m13:19:04.947690 [info ] [MainThread]: python version: 3.13.3
+[0m13:19:04.948472 [info ] [MainThread]: python path: C:\Users\Itumeleng\PyCharmMiscProject\.venv\Scripts\python.exe
+[0m13:19:04.949247 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m13:19:05.057304 [info ] [MainThread]: Using profiles dir at C:\Users\Itumeleng\.dbt
+[0m13:19:05.058280 [info ] [MainThread]: Using profiles.yml file at C:\Users\Itumeleng\.dbt\profiles.yml
+[0m13:19:05.059044 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\dbt_project.yml
+[0m13:19:05.060491 [info ] [MainThread]: adapter type: postgres
+[0m13:19:05.061283 [info ] [MainThread]: adapter version: 1.9.1
+[0m13:19:05.308624 [info ] [MainThread]: Configuration:
+[0m13:19:05.309575 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:19:05.310384 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:19:05.311140 [info ] [MainThread]: Required dependencies:
+[0m13:19:05.311967 [debug] [MainThread]: Executing "git --help"
+[0m13:19:05.391394 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:19:05.392180 [debug] [MainThread]: STDERR: "b''"
+[0m13:19:05.392972 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:19:05.393870 [info ] [MainThread]: Connection:
+[0m13:19:05.394851 [info ] [MainThread]:   host: localhost
+[0m13:19:05.395789 [info ] [MainThread]:   port: 5432
+[0m13:19:05.396605 [info ] [MainThread]:   user: itumeleng
+[0m13:19:05.397400 [info ] [MainThread]:   database: bank_analytics
+[0m13:19:05.398193 [info ] [MainThread]:   schema: analytics
+[0m13:19:05.399004 [info ] [MainThread]:   connect_timeout: 10
+[0m13:19:05.399811 [info ] [MainThread]:   role: None
+[0m13:19:05.400608 [info ] [MainThread]:   search_path: None
+[0m13:19:05.401396 [info ] [MainThread]:   keepalives_idle: 0
+[0m13:19:05.402186 [info ] [MainThread]:   sslmode: None
+[0m13:19:05.402983 [info ] [MainThread]:   sslcert: None
+[0m13:19:05.403803 [info ] [MainThread]:   sslkey: None
+[0m13:19:05.404622 [info ] [MainThread]:   sslrootcert: None
+[0m13:19:05.405633 [info ] [MainThread]:   application_name: dbt
+[0m13:19:05.406505 [info ] [MainThread]:   retries: 1
+[0m13:19:05.408045 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m13:19:05.938227 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m13:19:06.062599 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:19:06.063280 [debug] [MainThread]: On debug: select 1 as id
+[0m13:19:06.063817 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:19:06.262900 [debug] [MainThread]: SQL status: SELECT 1 in 0.199 seconds
+[0m13:19:06.264413 [debug] [MainThread]: On debug: Close
+[0m13:19:06.265090 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:19:06.266103 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:19:06.267910 [debug] [MainThread]: Command `dbt debug` succeeded at 13:19:06.267656 after 1.79 seconds
+[0m13:19:06.268453 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:19:06.268998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB92B128B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB92C21910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BB92A82250>]}
+[0m13:19:06.269680 [debug] [MainThread]: Flushing usage events
+[0m13:19:07.949394 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:19:26.919589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FABBB96E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAB7957390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FAB98A7B10>]}
+
+
+============================== 13:19:26.926324 | f870d97a-ef76-4868-864b-2d22e215eca0 ==============================
+[0m13:19:26.926324 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:19:26.927506 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'invocation_command': 'dbt debug --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'write_json': 'True', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'no_print': 'None', 'warn_error': 'None', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m13:19:26.950929 [info ] [MainThread]: dbt version: 1.10.13
+[0m13:19:26.951970 [info ] [MainThread]: python version: 3.13.3
+[0m13:19:26.953001 [info ] [MainThread]: python path: C:\Users\Itumeleng\PyCharmMiscProject\.venv\Scripts\python.exe
+[0m13:19:26.953988 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m13:19:27.053293 [info ] [MainThread]: Using profiles dir at C:\Users\Itumeleng\.dbt
+[0m13:19:27.054479 [info ] [MainThread]: Using profiles.yml file at C:\Users\Itumeleng\.dbt\profiles.yml
+[0m13:19:27.055376 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\dbt_project.yml
+[0m13:19:27.057075 [info ] [MainThread]: adapter type: postgres
+[0m13:19:27.057975 [info ] [MainThread]: adapter version: 1.9.1
+[0m13:19:27.275252 [info ] [MainThread]: Configuration:
+[0m13:19:27.276162 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:19:27.276969 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:19:27.277958 [info ] [MainThread]: Required dependencies:
+[0m13:19:27.279378 [debug] [MainThread]: Executing "git --help"
+[0m13:19:27.346911 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:19:27.347615 [debug] [MainThread]: STDERR: "b''"
+[0m13:19:27.348288 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:19:27.349306 [info ] [MainThread]: Connection:
+[0m13:19:27.350438 [info ] [MainThread]:   host: localhost
+[0m13:19:27.351334 [info ] [MainThread]:   port: 5432
+[0m13:19:27.352344 [info ] [MainThread]:   user: itumeleng
+[0m13:19:27.353509 [info ] [MainThread]:   database: bank_analytics
+[0m13:19:27.354598 [info ] [MainThread]:   schema: analytics
+[0m13:19:27.355709 [info ] [MainThread]:   connect_timeout: 10
+[0m13:19:27.356664 [info ] [MainThread]:   role: None
+[0m13:19:27.357647 [info ] [MainThread]:   search_path: None
+[0m13:19:27.358696 [info ] [MainThread]:   keepalives_idle: 0
+[0m13:19:27.359896 [info ] [MainThread]:   sslmode: None
+[0m13:19:27.361053 [info ] [MainThread]:   sslcert: None
+[0m13:19:27.362348 [info ] [MainThread]:   sslkey: None
+[0m13:19:27.363197 [info ] [MainThread]:   sslrootcert: None
+[0m13:19:27.364060 [info ] [MainThread]:   application_name: dbt
+[0m13:19:27.364865 [info ] [MainThread]:   retries: 1
+[0m13:19:27.366013 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m13:19:27.824249 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m13:19:27.923216 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:19:27.923790 [debug] [MainThread]: On debug: select 1 as id
+[0m13:19:27.924230 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:19:28.007324 [debug] [MainThread]: SQL status: SELECT 1 in 0.083 seconds
+[0m13:19:28.008734 [debug] [MainThread]: On debug: Close
+[0m13:19:28.009365 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:19:28.010363 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:19:28.011943 [debug] [MainThread]: Command `dbt debug` succeeded at 13:19:28.011715 after 1.33 seconds
+[0m13:19:28.012522 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:19:28.013137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FABE0D68B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FABE195910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FABE042250>]}
+[0m13:19:28.014084 [debug] [MainThread]: Flushing usage events
+[0m13:19:29.660235 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:19:40.595781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025008592E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025004327390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000250062ABB10>]}
+
+
+============================== 13:19:40.601879 | 1ac961f7-9803-442d-8973-02b3d2164eaa ==============================
+[0m13:19:40.601879 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:19:40.602952 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'write_json': 'True', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m13:19:40.976625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025008AC0C30>]}
+[0m13:19:41.119034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500A867240>]}
+[0m13:19:41.120619 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m13:19:41.578339 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m13:19:41.743179 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:19:41.743686 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:19:41.779487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500A7D8750>]}
+[0m13:19:41.859902 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:19:41.863658 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:19:41.892393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025009084320>]}
+[0m13:19:41.893134 [info ] [MainThread]: Found 1 model, 447 macros
+[0m13:19:41.893989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500ADB5470>]}
+[0m13:19:41.896318 [info ] [MainThread]: 
+[0m13:19:41.897131 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:19:41.897905 [info ] [MainThread]: 
+[0m13:19:41.898945 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:19:41.900462 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m13:19:42.013977 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m13:19:42.014616 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:19:42.015073 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:19:42.120597 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.105 seconds
+[0m13:19:42.122750 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m13:19:42.125378 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics_analytics'
+[0m13:19:42.133562 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics_analytics"
+[0m13:19:42.134142 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: BEGIN
+[0m13:19:42.134580 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:19:42.211755 [debug] [ThreadPool]: SQL status: BEGIN in 0.077 seconds
+[0m13:19:42.212330 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics_analytics"
+[0m13:19:42.212829 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics_analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics_analytics'
+  
+[0m13:19:42.228458 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.015 seconds
+[0m13:19:42.230405 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: ROLLBACK
+[0m13:19:42.231226 [debug] [ThreadPool]: On list_bank_analytics_analytics_analytics: Close
+[0m13:19:42.243308 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.244090 [debug] [MainThread]: On master: BEGIN
+[0m13:19:42.244535 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:19:42.332480 [debug] [MainThread]: SQL status: BEGIN in 0.088 seconds
+[0m13:19:42.333088 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.333687 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:19:42.350281 [debug] [MainThread]: SQL status: SELECT 1 in 0.016 seconds
+[0m13:19:42.352234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500AF6ADD0>]}
+[0m13:19:42.352884 [debug] [MainThread]: On master: ROLLBACK
+[0m13:19:42.353706 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.354212 [debug] [MainThread]: On master: BEGIN
+[0m13:19:42.355297 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m13:19:42.355806 [debug] [MainThread]: On master: COMMIT
+[0m13:19:42.356294 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.356761 [debug] [MainThread]: On master: COMMIT
+[0m13:19:42.357527 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:19:42.358092 [debug] [MainThread]: On master: Close
+[0m13:19:42.365753 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m13:19:42.366659 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics_analytics.staging__churn ................ [RUN]
+[0m13:19:42.368016 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m13:19:42.368919 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m13:19:42.379528 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m13:19:42.381100 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m13:19:42.448645 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m13:19:42.450578 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:19:42.451368 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m13:19:42.451986 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:19:42.632954 [debug] [Thread-1 (]: SQL status: BEGIN in 0.181 seconds
+[0m13:19:42.633568 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:19:42.634098 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics_analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/staging__churn.sql
+
+
+with base as (
+    select
+      month::date,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / total_users_start) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / total_users_start) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+order by month;
+  );
+  
+[0m13:19:42.635521 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near ";"
+LINE 30: order by month;
+                       ^
+
+[0m13:19:42.636103 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: ROLLBACK
+[0m13:19:42.637015 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m13:19:42.647149 [debug] [Thread-1 (]: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:19:42.649536 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1ac961f7-9803-442d-8973-02b3d2164eaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500AD93F50>]}
+[0m13:19:42.650432 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics_analytics.staging__churn ....... [[31mERROR[0m in 0.28s]
+[0m13:19:42.651647 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m13:19:42.652524 [debug] [Thread-4 (]: Marking all children of 'model.bank_analytics_dbt.staging__churn' to be skipped because of status 'error'.  Reason: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql.
+[0m13:19:42.655271 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.655828 [debug] [MainThread]: On master: BEGIN
+[0m13:19:42.656270 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:19:42.833757 [debug] [MainThread]: SQL status: BEGIN in 0.177 seconds
+[0m13:19:42.834294 [debug] [MainThread]: On master: COMMIT
+[0m13:19:42.834727 [debug] [MainThread]: Using postgres connection "master"
+[0m13:19:42.835133 [debug] [MainThread]: On master: COMMIT
+[0m13:19:42.835854 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:19:42.836306 [debug] [MainThread]: On master: Close
+[0m13:19:42.836939 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:19:42.837352 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m13:19:42.837872 [debug] [MainThread]: Connection 'list_bank_analytics_analytics_analytics' was properly closed.
+[0m13:19:42.838232 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m13:19:42.838647 [info ] [MainThread]: 
+[0m13:19:42.839535 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.94 seconds (0.94s).
+[0m13:19:42.841950 [debug] [MainThread]: Command end result
+[0m13:19:42.870083 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:19:42.875963 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:19:42.885674 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m13:19:42.886307 [info ] [MainThread]: 
+[0m13:19:42.887377 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:19:42.888367 [info ] [MainThread]: 
+[0m13:19:42.889483 [error] [MainThread]: [31mFailure in model staging__churn (models\staging__churn.sql)[0m
+[0m13:19:42.890417 [error] [MainThread]:   Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 30: order by month;
+                         ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:19:42.891394 [info ] [MainThread]: 
+[0m13:19:42.892280 [info ] [MainThread]:   compiled code at target\compiled\bank_analytics_dbt\models\staging__churn.sql
+[0m13:19:42.893072 [info ] [MainThread]: 
+[0m13:19:42.894052 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:19:42.895609 [debug] [MainThread]: Command `dbt run` failed at 13:19:42.895392 after 2.52 seconds
+[0m13:19:42.896180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500AD9A0A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500B0FEC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002500B0FED50>]}
+[0m13:19:42.896735 [debug] [MainThread]: Flushing usage events
+[0m13:19:44.561300 [debug] [MainThread]: An error was encountered while trying to flush usage events
+13:24:03.774572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E79FDB0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E75CF7390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E77CFFC50>]}
+
+
+============================== 13:24:03.786868 | 56c5a84d-83c6-4250-a174-8d3e5ea5b80d ==============================
+13:24:03.786868 [info ] [MainThread]: Running with dbt=1.10.13
+13:24:03.788182 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'no_print': 'None', 'target_path': 'None', 'printer_width': '80', 'use_colors': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt --no-use-colors parse', 'cache_selected_only': 'False', 'write_json': 'True'}
+13:24:04.420099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '56c5a84d-83c6-4250-a174-8d3e5ea5b80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7A524C30>]}
+13:24:04.652517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '56c5a84d-83c6-4250-a174-8d3e5ea5b80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7C2C7240>]}
+13:24:04.654705 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+13:24:05.324252 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+13:24:05.558340 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+13:24:05.558961 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+13:24:05.604791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '56c5a84d-83c6-4250-a174-8d3e5ea5b80d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7C238750>]}
+13:24:05.611573 [info ] [MainThread]: Performance info: C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\perf_info.json
+13:24:05.712400 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+13:24:05.717178 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+13:24:05.718788 [debug] [MainThread]: Command `dbt parse` succeeded at 13:24:05.718556 after 2.35 seconds
+13:24:05.719428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7AAE4320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7C2B4AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020E7B043D90>]}
+13:24:05.720047 [debug] [MainThread]: Flushing usage events
+13:24:19.071289 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:25:18.869581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE39A2E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CDF737390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE16BBB10>]}
+
+
+============================== 13:25:18.879586 | 4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c ==============================
+[0m13:25:18.879586 [info ] [MainThread]: Running with dbt=1.10.13
+[0m13:25:18.882122 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m13:25:19.548265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE3ED4C30>]}
+[0m13:25:19.770069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE5C77240>]}
+[0m13:25:19.772150 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m13:25:20.478517 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m13:25:20.693764 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m13:25:20.694894 [debug] [MainThread]: Partial parsing: updated file: bank_analytics_dbt://models\staging__churn.sql
+[0m13:25:21.369794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE5BEFE50>]}
+[0m13:25:21.488329 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:25:21.492860 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:25:21.555082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE5C64E60>]}
+[0m13:25:21.555975 [info ] [MainThread]: Found 1 model, 447 macros
+[0m13:25:21.556973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE60466D0>]}
+[0m13:25:21.561008 [info ] [MainThread]: 
+[0m13:25:21.562386 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:25:21.563543 [info ] [MainThread]: 
+[0m13:25:21.565436 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:25:21.569074 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m13:25:21.726280 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m13:25:21.726991 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:25:21.727591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:25:21.970492 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.243 seconds
+[0m13:25:21.973002 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m13:25:21.976521 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+[0m13:25:21.988891 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m13:25:21.989653 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+[0m13:25:21.990235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:25:22.095275 [debug] [ThreadPool]: SQL status: BEGIN in 0.105 seconds
+[0m13:25:22.096002 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m13:25:22.096635 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m13:25:22.151244 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.054 seconds
+[0m13:25:22.153659 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+[0m13:25:22.155202 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+[0m13:25:22.168367 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.169137 [debug] [MainThread]: On master: BEGIN
+[0m13:25:22.169722 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:25:22.281274 [debug] [MainThread]: SQL status: BEGIN in 0.111 seconds
+[0m13:25:22.282374 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.283592 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:25:22.322672 [debug] [MainThread]: SQL status: SELECT 1 in 0.038 seconds
+[0m13:25:22.325106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE655A0D0>]}
+[0m13:25:22.325927 [debug] [MainThread]: On master: ROLLBACK
+[0m13:25:22.326979 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.327627 [debug] [MainThread]: On master: BEGIN
+[0m13:25:22.328935 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m13:25:22.329598 [debug] [MainThread]: On master: COMMIT
+[0m13:25:22.330228 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.331045 [debug] [MainThread]: On master: COMMIT
+[0m13:25:22.332363 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:25:22.333155 [debug] [MainThread]: On master: Close
+[0m13:25:22.344683 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m13:25:22.345818 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.staging__churn .......................... [RUN]
+[0m13:25:22.347529 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m13:25:22.349920 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m13:25:22.368537 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m13:25:22.370949 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m13:25:22.457699 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m13:25:22.460024 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:25:22.461073 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m13:25:22.461814 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m13:25:22.567700 [debug] [Thread-1 (]: SQL status: BEGIN in 0.106 seconds
+[0m13:25:22.568742 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m13:25:22.569700 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    ﻿
+
+with base as (
+    select
+      month::date as month,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+;
+  );
+  
+[0m13:25:22.586686 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near "﻿"
+LINE 12:     ﻿
+             ^
+
+[0m13:25:22.587575 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: ROLLBACK
+[0m13:25:22.588873 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m13:25:22.613974 [debug] [Thread-1 (]: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near "﻿"
+  LINE 12:     ﻿
+               ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:25:22.618639 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b2f0cdd-1aaf-4fcf-af97-9988cb0fde0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE6718950>]}
+[0m13:25:22.620045 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics.staging__churn ................. [[31mERROR[0m in 0.27s]
+[0m13:25:22.621787 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m13:25:22.623050 [debug] [Thread-4 (]: Marking all children of 'model.bank_analytics_dbt.staging__churn' to be skipped because of status 'error'.  Reason: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near "﻿"
+  LINE 12:     ﻿
+               ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql.
+[0m13:25:22.627078 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.627785 [debug] [MainThread]: On master: BEGIN
+[0m13:25:22.628369 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:25:22.737477 [debug] [MainThread]: SQL status: BEGIN in 0.109 seconds
+[0m13:25:22.738242 [debug] [MainThread]: On master: COMMIT
+[0m13:25:22.738879 [debug] [MainThread]: Using postgres connection "master"
+[0m13:25:22.739660 [debug] [MainThread]: On master: COMMIT
+[0m13:25:22.740695 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m13:25:22.741449 [debug] [MainThread]: On master: Close
+[0m13:25:22.742437 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:25:22.743049 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m13:25:22.743597 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+[0m13:25:22.744140 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m13:25:22.745019 [info ] [MainThread]: 
+[0m13:25:22.746150 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.18 seconds (1.18s).
+[0m13:25:22.748982 [debug] [MainThread]: Command end result
+[0m13:25:22.792066 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m13:25:22.798144 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m13:25:22.812836 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m13:25:22.814270 [info ] [MainThread]: 
+[0m13:25:22.816514 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:25:22.818756 [info ] [MainThread]: 
+[0m13:25:22.820482 [error] [MainThread]: [31mFailure in model staging__churn (models\staging__churn.sql)[0m
+[0m13:25:22.821878 [error] [MainThread]:   Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near "﻿"
+  LINE 12:     ﻿
+               ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m13:25:22.823598 [info ] [MainThread]: 
+[0m13:25:22.824771 [info ] [MainThread]:   compiled code at target\compiled\bank_analytics_dbt\models\staging__churn.sql
+[0m13:25:22.826208 [info ] [MainThread]: 
+[0m13:25:22.827868 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m13:25:22.830084 [debug] [MainThread]: Command `dbt run` failed at 13:25:22.829749 after 4.49 seconds
+[0m13:25:22.832088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE62D7B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE6686990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CE6686AD0>]}
+[0m13:25:22.834024 [debug] [MainThread]: Flushing usage events
+[0m13:25:33.800880 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:50:14.159127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C08F2E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3BC627390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3BE603B10>]}
+
+
+============================== 15:50:14.168940 | 35d976ed-1eab-4473-b263-a98ae762e67a ==============================
+[0m15:50:14.168940 [info ] [MainThread]: Running with dbt=1.10.13
+[0m15:50:14.170147 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'log_format': 'default', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m15:50:14.597473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C0E20C30>]}
+[0m15:50:14.728663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C2BCB240>]}
+[0m15:50:14.730410 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m15:50:15.189193 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m15:50:15.424058 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:50:15.424767 [debug] [MainThread]: Partial parsing: updated file: bank_analytics_dbt://models\staging__churn.sql
+[0m15:50:15.852562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C2B3BE50>]}
+[0m15:50:15.928329 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m15:50:15.932477 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m15:50:15.976014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C2BB4E60>]}
+[0m15:50:15.976627 [info ] [MainThread]: Found 1 model, 447 macros
+[0m15:50:15.977508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C301E6D0>]}
+[0m15:50:15.980816 [info ] [MainThread]: 
+[0m15:50:15.982002 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:50:15.982964 [info ] [MainThread]: 
+[0m15:50:15.984072 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:50:15.987619 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m15:50:16.093724 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m15:50:16.094243 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:50:16.094632 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:50:16.283359 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.189 seconds
+[0m15:50:16.285658 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m15:50:16.288469 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+[0m15:50:16.296291 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m15:50:16.297429 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+[0m15:50:16.298068 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:50:16.378397 [debug] [ThreadPool]: SQL status: BEGIN in 0.080 seconds
+[0m15:50:16.379124 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m15:50:16.379801 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m15:50:16.417902 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.037 seconds
+[0m15:50:16.419653 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+[0m15:50:16.420495 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+[0m15:50:16.426618 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.427136 [debug] [MainThread]: On master: BEGIN
+[0m15:50:16.427543 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:50:16.506466 [debug] [MainThread]: SQL status: BEGIN in 0.079 seconds
+[0m15:50:16.507093 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.507668 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:50:16.536427 [debug] [MainThread]: SQL status: SELECT 1 in 0.028 seconds
+[0m15:50:16.538186 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C352A0D0>]}
+[0m15:50:16.538807 [debug] [MainThread]: On master: ROLLBACK
+[0m15:50:16.539707 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.540307 [debug] [MainThread]: On master: BEGIN
+[0m15:50:16.541348 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m15:50:16.541847 [debug] [MainThread]: On master: COMMIT
+[0m15:50:16.542305 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.542690 [debug] [MainThread]: On master: COMMIT
+[0m15:50:16.543397 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:50:16.543864 [debug] [MainThread]: On master: Close
+[0m15:50:16.553185 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m15:50:16.553971 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.staging__churn .......................... [RUN]
+[0m15:50:16.555270 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m15:50:16.556714 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m15:50:16.565932 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m15:50:16.567540 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m15:50:16.629005 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m15:50:16.630865 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m15:50:16.632780 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m15:50:16.633840 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:50:16.704995 [debug] [Thread-1 (]: SQL status: BEGIN in 0.071 seconds
+[0m15:50:16.705669 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m15:50:16.706199 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with base as (
+    select
+      month::date as month,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+;
+  );
+  
+[0m15:50:16.714744 [debug] [Thread-1 (]: Postgres adapter: Postgres error: syntax error at or near ";"
+LINE 29: ;
+         ^
+
+[0m15:50:16.715438 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: ROLLBACK
+[0m15:50:16.716710 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m15:50:16.736579 [debug] [Thread-1 (]: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 29: ;
+           ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m15:50:16.739101 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '35d976ed-1eab-4473-b263-a98ae762e67a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C36E8890>]}
+[0m15:50:16.740013 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics.staging__churn ................. [[31mERROR[0m in 0.18s]
+[0m15:50:16.741172 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m15:50:16.742086 [debug] [Thread-4 (]: Marking all children of 'model.bank_analytics_dbt.staging__churn' to be skipped because of status 'error'.  Reason: Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 29: ;
+           ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql.
+[0m15:50:16.744765 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.745288 [debug] [MainThread]: On master: BEGIN
+[0m15:50:16.745680 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:50:16.820804 [debug] [MainThread]: SQL status: BEGIN in 0.075 seconds
+[0m15:50:16.821385 [debug] [MainThread]: On master: COMMIT
+[0m15:50:16.821839 [debug] [MainThread]: Using postgres connection "master"
+[0m15:50:16.822291 [debug] [MainThread]: On master: COMMIT
+[0m15:50:16.823001 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:50:16.823506 [debug] [MainThread]: On master: Close
+[0m15:50:16.824205 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:50:16.824667 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m15:50:16.825289 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+[0m15:50:16.825679 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m15:50:16.826105 [info ] [MainThread]: 
+[0m15:50:16.826812 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.84 seconds (0.84s).
+[0m15:50:16.828503 [debug] [MainThread]: Command end result
+[0m15:50:16.859607 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m15:50:16.862714 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m15:50:16.872362 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m15:50:16.872871 [info ] [MainThread]: 
+[0m15:50:16.873678 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:50:16.874493 [info ] [MainThread]: 
+[0m15:50:16.875334 [error] [MainThread]: [31mFailure in model staging__churn (models\staging__churn.sql)[0m
+[0m15:50:16.876176 [error] [MainThread]:   Database Error in model staging__churn (models\staging__churn.sql)
+  syntax error at or near ";"
+  LINE 29: ;
+           ^
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m15:50:16.876992 [info ] [MainThread]: 
+[0m15:50:16.878606 [info ] [MainThread]:   compiled code at target\compiled\bank_analytics_dbt\models\staging__churn.sql
+[0m15:50:16.879737 [info ] [MainThread]: 
+[0m15:50:16.881690 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:50:16.884905 [debug] [MainThread]: Command `dbt run` failed at 15:50:16.884561 after 3.06 seconds
+[0m15:50:16.885728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C32A7B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C3656990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3C3656AD0>]}
+[0m15:50:16.886461 [debug] [MainThread]: Flushing usage events
+[0m15:50:28.384701 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:25:30.685671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C482152E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4FDE97390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4FFE6BB10>]}
+
+
+============================== 16:25:30.697109 | 6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87 ==============================
+[0m16:25:30.697109 [info ] [MainThread]: Running with dbt=1.10.13
+[0m16:25:30.698496 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'cache_selected_only': 'False', 'write_json': 'True', 'no_print': 'None', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m16:25:31.305732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C482684C30>]}
+[0m16:25:31.561361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484427240>]}
+[0m16:25:31.564042 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m16:25:32.677315 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m16:25:33.020224 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:25:33.021320 [debug] [MainThread]: Partial parsing: updated file: bank_analytics_dbt://models\staging__churn.sql
+[0m16:25:33.654123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C48439FE50>]}
+[0m16:25:33.761898 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m16:25:33.766450 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m16:25:33.818921 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484414E60>]}
+[0m16:25:33.819882 [info ] [MainThread]: Found 1 model, 447 macros
+[0m16:25:33.820909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C48483A6D0>]}
+[0m16:25:33.824400 [info ] [MainThread]: 
+[0m16:25:33.825412 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:25:33.826223 [info ] [MainThread]: 
+[0m16:25:33.827330 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:25:33.830388 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m16:25:34.021062 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m16:25:34.021813 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:25:34.022450 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:25:34.247537 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.225 seconds
+[0m16:25:34.250135 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m16:25:34.253581 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+[0m16:25:34.264678 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m16:25:34.265392 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+[0m16:25:34.265984 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:25:34.374504 [debug] [ThreadPool]: SQL status: BEGIN in 0.108 seconds
+[0m16:25:34.375283 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m16:25:34.376013 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m16:25:34.423624 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.047 seconds
+[0m16:25:34.426080 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+[0m16:25:34.427135 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+[0m16:25:34.435895 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:34.436649 [debug] [MainThread]: On master: BEGIN
+[0m16:25:34.437264 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:25:34.542057 [debug] [MainThread]: SQL status: BEGIN in 0.105 seconds
+[0m16:25:34.542828 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:34.543639 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:25:34.574529 [debug] [MainThread]: SQL status: SELECT 1 in 0.030 seconds
+[0m16:25:34.577057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484D4E0D0>]}
+[0m16:25:34.578002 [debug] [MainThread]: On master: ROLLBACK
+[0m16:25:34.579170 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:34.580000 [debug] [MainThread]: On master: BEGIN
+[0m16:25:34.581417 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:25:34.582081 [debug] [MainThread]: On master: COMMIT
+[0m16:25:34.582709 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:34.583337 [debug] [MainThread]: On master: COMMIT
+[0m16:25:34.584281 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:25:34.584996 [debug] [MainThread]: On master: Close
+[0m16:25:34.595634 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m16:25:34.596707 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.staging__churn .......................... [RUN]
+[0m16:25:34.598128 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m16:25:34.600022 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m16:25:34.613462 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m16:25:34.616002 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m16:25:34.695487 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m16:25:34.698065 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m16:25:34.698966 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m16:25:34.699651 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:25:34.810225 [debug] [Thread-1 (]: SQL status: BEGIN in 0.110 seconds
+[0m16:25:34.811094 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m16:25:34.811878 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with base as (
+    select
+      month::date as month,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+  );
+  
+[0m16:25:34.909220 [debug] [Thread-1 (]: Postgres adapter: Postgres error: invalid input syntax for type date: "2024-01"
+
+[0m16:25:34.910097 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: ROLLBACK
+[0m16:25:34.911389 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m16:25:34.933695 [debug] [Thread-1 (]: Database Error in model staging__churn (models\staging__churn.sql)
+  invalid input syntax for type date: "2024-01"
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m16:25:34.937216 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6c22c20c-2fe0-4cf6-8ca9-cc45ae16bd87', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484F08890>]}
+[0m16:25:34.938477 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model analytics.staging__churn ................. [[31mERROR[0m in 0.34s]
+[0m16:25:34.940004 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m16:25:34.941249 [debug] [Thread-4 (]: Marking all children of 'model.bank_analytics_dbt.staging__churn' to be skipped because of status 'error'.  Reason: Database Error in model staging__churn (models\staging__churn.sql)
+  invalid input syntax for type date: "2024-01"
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql.
+[0m16:25:34.944402 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:34.945010 [debug] [MainThread]: On master: BEGIN
+[0m16:25:34.945563 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:25:35.047627 [debug] [MainThread]: SQL status: BEGIN in 0.102 seconds
+[0m16:25:35.048363 [debug] [MainThread]: On master: COMMIT
+[0m16:25:35.049029 [debug] [MainThread]: Using postgres connection "master"
+[0m16:25:35.049722 [debug] [MainThread]: On master: COMMIT
+[0m16:25:35.050762 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:25:35.051409 [debug] [MainThread]: On master: Close
+[0m16:25:35.052318 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:25:35.052900 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m16:25:35.053687 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+[0m16:25:35.054221 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m16:25:35.054812 [info ] [MainThread]: 
+[0m16:25:35.055771 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.23 seconds (1.23s).
+[0m16:25:35.057696 [debug] [MainThread]: Command end result
+[0m16:25:35.093277 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m16:25:35.098124 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m16:25:35.110847 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m16:25:35.111543 [info ] [MainThread]: 
+[0m16:25:35.112575 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:25:35.113480 [info ] [MainThread]: 
+[0m16:25:35.114525 [error] [MainThread]: [31mFailure in model staging__churn (models\staging__churn.sql)[0m
+[0m16:25:35.115594 [error] [MainThread]:   Database Error in model staging__churn (models\staging__churn.sql)
+  invalid input syntax for type date: "2024-01"
+  compiled code at target\run\bank_analytics_dbt\models\staging__churn.sql
+[0m16:25:35.117588 [info ] [MainThread]: 
+[0m16:25:35.118748 [info ] [MainThread]:   compiled code at target\compiled\bank_analytics_dbt\models\staging__churn.sql
+[0m16:25:35.119722 [info ] [MainThread]: 
+[0m16:25:35.120855 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:25:35.123945 [debug] [MainThread]: Command `dbt run` failed at 16:25:35.123527 after 4.81 seconds
+[0m16:25:35.125149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484AC3B70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484E86990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C484E86AD0>]}
+[0m16:25:35.125978 [debug] [MainThread]: Flushing usage events
+[0m16:25:37.938101 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:24:47.747181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D715616E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D711397390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D713327B10>]}
+
+
+============================== 17:24:47.759637 | 6f19ee18-ff55-4f78-886d-091c300c6705 ==============================
+[0m17:24:47.759637 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:24:47.761095 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'log_format': 'default', 'warn_error': 'None', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m17:24:48.399308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D715B40C30>]}
+[0m17:24:48.608707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7178EB240>]}
+[0m17:24:48.611461 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m17:24:50.683409 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:24:51.583974 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:24:51.589241 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:24:51.813317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D717858750>]}
+[0m17:24:52.279794 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m17:24:52.320781 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m17:24:53.190898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D716104320>]}
+[0m17:24:53.197174 [info ] [MainThread]: Found 1 model, 447 macros
+[0m17:24:53.201142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D717EA5470>]}
+[0m17:24:53.224791 [info ] [MainThread]: 
+[0m17:24:53.229839 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:24:53.235287 [info ] [MainThread]: 
+[0m17:24:53.240960 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:24:53.250419 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m17:25:00.245210 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m17:25:00.250122 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:25:00.254231 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:25:03.144720 [debug] [ThreadPool]: SQL status: SELECT 8 in 2.890 seconds
+[0m17:25:03.153938 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m17:25:03.208007 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+[0m17:25:03.265987 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m17:25:03.268137 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+[0m17:25:03.278433 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:25:04.156917 [debug] [ThreadPool]: SQL status: BEGIN in 0.878 seconds
+[0m17:25:04.160493 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m17:25:04.163914 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:25:04.624980 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.452 seconds
+[0m17:25:04.646361 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+[0m17:25:04.649083 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+[0m17:25:04.766762 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:04.769673 [debug] [MainThread]: On master: BEGIN
+[0m17:25:04.772039 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:25:05.411476 [debug] [MainThread]: SQL status: BEGIN in 0.639 seconds
+[0m17:25:05.414153 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:05.417612 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:25:05.505682 [debug] [MainThread]: SQL status: SELECT 0 in 0.085 seconds
+[0m17:25:05.514443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D71804F2B0>]}
+[0m17:25:05.517363 [debug] [MainThread]: On master: ROLLBACK
+[0m17:25:05.520371 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:05.523243 [debug] [MainThread]: On master: BEGIN
+[0m17:25:05.526994 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m17:25:05.529305 [debug] [MainThread]: On master: COMMIT
+[0m17:25:05.534099 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:05.536839 [debug] [MainThread]: On master: COMMIT
+[0m17:25:05.540141 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:25:05.542621 [debug] [MainThread]: On master: Close
+[0m17:25:05.604803 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m17:25:05.609716 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.staging__churn .......................... [RUN]
+[0m17:25:05.626578 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m17:25:05.629982 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m17:25:05.711587 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m17:25:05.721142 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m17:25:06.156105 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.164415 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.168779 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m17:25:06.172786 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:25:06.509207 [debug] [Thread-1 (]: SQL status: BEGIN in 0.336 seconds
+[0m17:25:06.512157 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.515830 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with base as (
+    select
+      month::date as month,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+  );
+  
+[0m17:25:06.610670 [debug] [Thread-1 (]: SQL status: SELECT 12 in 0.092 seconds
+[0m17:25:06.667997 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.670345 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+alter table "bank_analytics"."analytics"."staging__churn__dbt_tmp" rename to "staging__churn"
+[0m17:25:06.677308 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.004 seconds
+[0m17:25:06.777072 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: COMMIT
+[0m17:25:06.781305 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.784605 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: COMMIT
+[0m17:25:06.792796 [debug] [Thread-1 (]: SQL status: COMMIT in 0.005 seconds
+[0m17:25:06.829685 [debug] [Thread-1 (]: Applying DROP to: "bank_analytics"."analytics"."staging__churn__dbt_backup"
+[0m17:25:06.861094 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:25:06.863589 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+drop table if exists "bank_analytics"."analytics"."staging__churn__dbt_backup" cascade
+[0m17:25:06.868730 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m17:25:06.884133 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m17:25:06.897442 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6f19ee18-ff55-4f78-886d-091c300c6705', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D717E83A10>]}
+[0m17:25:06.902282 [info ] [Thread-1 (]: 1 of 1 OK created sql table model analytics.staging__churn ..................... [[32mSELECT 12[0m in 1.26s]
+[0m17:25:06.915386 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m17:25:06.924087 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:06.926202 [debug] [MainThread]: On master: BEGIN
+[0m17:25:06.927904 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:25:07.226228 [debug] [MainThread]: SQL status: BEGIN in 0.298 seconds
+[0m17:25:07.228791 [debug] [MainThread]: On master: COMMIT
+[0m17:25:07.231157 [debug] [MainThread]: Using postgres connection "master"
+[0m17:25:07.233440 [debug] [MainThread]: On master: COMMIT
+[0m17:25:07.236729 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:25:07.238663 [debug] [MainThread]: On master: Close
+[0m17:25:07.241416 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:25:07.243749 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m17:25:07.245652 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+[0m17:25:07.247600 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m17:25:07.249384 [info ] [MainThread]: 
+[0m17:25:07.259944 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 14.01 seconds (14.01s).
+[0m17:25:07.268559 [debug] [MainThread]: Command end result
+[0m17:25:07.442217 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m17:25:07.658895 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m17:25:07.936971 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m17:25:07.938746 [info ] [MainThread]: 
+[0m17:25:08.147130 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:25:08.231729 [info ] [MainThread]: 
+[0m17:25:08.283742 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:25:08.302104 [debug] [MainThread]: Command `dbt run` succeeded at 17:25:08.301024 after 20.88 seconds
+[0m17:25:08.312405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D717E8AA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7181DE670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7181DE490>]}
+[0m17:25:08.315033 [debug] [MainThread]: Flushing usage events
+[0m17:25:16.319053 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:37:23.937555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021830466E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002182C1E7390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002182E16BB10>]}
+
+
+============================== 17:37:23.952441 | b9e1ffbe-d6b3-4878-9bf0-37f4717becc6 ==============================
+[0m17:37:23.952441 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:37:23.954754 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'log_format': 'default', 'target_path': 'None', 'use_colors': 'True', 'printer_width': '80', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --project-dir C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m17:37:24.613638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021830994C30>]}
+[0m17:37:24.826249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832737240>]}
+[0m17:37:24.828488 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m17:37:26.117121 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m17:37:26.753076 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:37:26.754907 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:37:26.883469 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000218326A8750>]}
+[0m17:37:27.090257 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m17:37:27.106186 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m17:37:27.184522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021830F58320>]}
+[0m17:37:27.185842 [info ] [MainThread]: Found 1 model, 447 macros
+[0m17:37:27.187272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832C81470>]}
+[0m17:37:27.192048 [info ] [MainThread]: 
+[0m17:37:27.193453 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:37:27.194903 [info ] [MainThread]: 
+[0m17:37:27.196833 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:37:27.200086 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics'
+[0m17:37:27.487964 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics"
+[0m17:37:27.490540 [debug] [ThreadPool]: On list_bank_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:37:27.492272 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:37:27.805457 [debug] [ThreadPool]: SQL status: SELECT 8 in 0.313 seconds
+[0m17:37:27.811862 [debug] [ThreadPool]: On list_bank_analytics: Close
+[0m17:37:27.819084 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+[0m17:37:27.843897 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m17:37:27.844898 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+[0m17:37:27.846394 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:37:28.030857 [debug] [ThreadPool]: SQL status: BEGIN in 0.184 seconds
+[0m17:37:28.032429 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+[0m17:37:28.033935 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m17:37:28.070397 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.035 seconds
+[0m17:37:28.073980 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+[0m17:37:28.075347 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+[0m17:37:28.087896 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:28.088871 [debug] [MainThread]: On master: BEGIN
+[0m17:37:28.089641 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:37:28.230176 [debug] [MainThread]: SQL status: BEGIN in 0.140 seconds
+[0m17:37:28.231250 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:28.232298 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m17:37:28.272138 [debug] [MainThread]: SQL status: SELECT 0 in 0.038 seconds
+[0m17:37:28.275110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832E3B2B0>]}
+[0m17:37:28.276220 [debug] [MainThread]: On master: ROLLBACK
+[0m17:37:28.277553 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:28.278432 [debug] [MainThread]: On master: BEGIN
+[0m17:37:28.279988 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m17:37:28.281046 [debug] [MainThread]: On master: COMMIT
+[0m17:37:28.282104 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:28.283373 [debug] [MainThread]: On master: COMMIT
+[0m17:37:28.285158 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:37:28.286485 [debug] [MainThread]: On master: Close
+[0m17:37:28.302035 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+[0m17:37:28.303561 [info ] [Thread-1 (]: 1 of 1 START sql table model analytics.staging__churn .......................... [RUN]
+[0m17:37:28.305673 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+[0m17:37:28.306647 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+[0m17:37:28.323221 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.325813 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+[0m17:37:28.459070 [debug] [Thread-1 (]: Writing runtime sql for node "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.462132 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.463861 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: BEGIN
+[0m17:37:28.465420 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:37:28.696154 [debug] [Thread-1 (]: SQL status: BEGIN in 0.231 seconds
+[0m17:37:28.698599 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.701196 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+
+  
+    
+
+  create  table "bank_analytics"."analytics"."staging__churn__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with base as (
+    select
+      month::date as month,
+      churned_users,
+      total_users_start
+    from raw.churn
+)
+
+select
+  month,
+  churned_users,
+  total_users_start,
+  round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2) as churn_rate_pct,
+  lag(round((churned_users::numeric / nullif(total_users_start,0)) * 100, 2)) over (order by month) as churn_rate_prev
+from base
+  );
+  
+[0m17:37:28.771041 [debug] [Thread-1 (]: SQL status: SELECT 12 in 0.067 seconds
+[0m17:37:28.807690 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.808689 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+alter table "bank_analytics"."analytics"."staging__churn" rename to "staging__churn__dbt_backup"
+[0m17:37:28.812921 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m17:37:28.821824 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.822817 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+alter table "bank_analytics"."analytics"."staging__churn__dbt_tmp" rename to "staging__churn"
+[0m17:37:28.826261 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m17:37:28.880858 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: COMMIT
+[0m17:37:28.883001 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.885001 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: COMMIT
+[0m17:37:28.891934 [debug] [Thread-1 (]: SQL status: COMMIT in 0.005 seconds
+[0m17:37:28.916769 [debug] [Thread-1 (]: Applying DROP to: "bank_analytics"."analytics"."staging__churn__dbt_backup"
+[0m17:37:28.937838 [debug] [Thread-1 (]: Using postgres connection "model.bank_analytics_dbt.staging__churn"
+[0m17:37:28.939767 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "node_id": "model.bank_analytics_dbt.staging__churn"} */
+drop table if exists "bank_analytics"."analytics"."staging__churn__dbt_backup" cascade
+[0m17:37:28.958065 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.017 seconds
+[0m17:37:28.964496 [debug] [Thread-1 (]: On model.bank_analytics_dbt.staging__churn: Close
+[0m17:37:28.972203 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b9e1ffbe-d6b3-4878-9bf0-37f4717becc6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832C63950>]}
+[0m17:37:28.975546 [info ] [Thread-1 (]: 1 of 1 OK created sql table model analytics.staging__churn ..................... [[32mSELECT 12[0m in 0.66s]
+[0m17:37:28.979696 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+[0m17:37:28.984348 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:28.985290 [debug] [MainThread]: On master: BEGIN
+[0m17:37:28.986292 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:37:29.122655 [debug] [MainThread]: SQL status: BEGIN in 0.136 seconds
+[0m17:37:29.124526 [debug] [MainThread]: On master: COMMIT
+[0m17:37:29.126270 [debug] [MainThread]: Using postgres connection "master"
+[0m17:37:29.127902 [debug] [MainThread]: On master: COMMIT
+[0m17:37:29.130187 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m17:37:29.131878 [debug] [MainThread]: On master: Close
+[0m17:37:29.133566 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:37:29.135095 [debug] [MainThread]: Connection 'list_bank_analytics' was properly closed.
+[0m17:37:29.136563 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+[0m17:37:29.138064 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+[0m17:37:29.139762 [info ] [MainThread]: 
+[0m17:37:29.141759 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.94 seconds (1.94s).
+[0m17:37:29.144539 [debug] [MainThread]: Command end result
+[0m17:37:29.251426 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+[0m17:37:29.260656 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+[0m17:37:29.280823 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+[0m17:37:29.282904 [info ] [MainThread]: 
+[0m17:37:29.285283 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:37:29.287073 [info ] [MainThread]: 
+[0m17:37:29.288572 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:37:29.291438 [debug] [MainThread]: Command `dbt run` succeeded at 17:37:29.291045 after 5.95 seconds
+[0m17:37:29.292780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832C66DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832FCECB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021832FCE7B0>]}
+[0m17:37:29.294317 [debug] [MainThread]: Flushing usage events
+[0m17:37:31.865003 [debug] [MainThread]: An error was encountered while trying to flush usage events
+16:16:57.286969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B772F0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B3557390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B549BC50>]}
+
+
+============================== 16:16:57.296327 | efffdabe-498e-4345-8623-07b2327925e5 ==============================
+16:16:57.296327 [info ] [MainThread]: Running with dbt=1.10.13
+16:16:57.297017 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'use_colors': 'False', 'no_print': 'None', 'printer_width': '80', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt --no-use-colors parse', 'cache_selected_only': 'False', 'target_path': 'None'}
+16:16:57.618434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'efffdabe-498e-4345-8623-07b2327925e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B7C70C30>]}
+16:16:57.728947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'efffdabe-498e-4345-8623-07b2327925e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B9A1B240>]}
+16:16:57.730697 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+16:16:58.124483 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+16:16:58.337237 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+16:16:58.337689 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+16:16:58.365962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'efffdabe-498e-4345-8623-07b2327925e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B9984750>]}
+16:16:58.370762 [info ] [MainThread]: Performance info: C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\perf_info.json
+16:16:58.434437 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+16:16:58.437241 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+16:16:58.438140 [debug] [MainThread]: Command `dbt parse` succeeded at 16:16:58.437980 after 1.38 seconds
+16:16:58.438568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B8234320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B9A04AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F2B8793D90>]}
+16:16:58.438994 [debug] [MainThread]: Flushing usage events
+16:17:15.866448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+16:18:04.668964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001940515B0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001947FB93390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019402EFBC50>]}
+
+
+============================== 16:18:04.675305 | 7e765ab2-84e7-463a-863b-b41666ad11bf ==============================
+16:18:04.675305 [info ] [MainThread]: Running with dbt=1.10.13
+16:18:04.676222 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'invocation_command': 'dbt --no-use-colors docs generate', 'printer_width': '80', 'no_print': 'None', 'log_format': 'default', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'C:\\Users\\Itumeleng\\Personal Projects\\Bank Customer Analytics\\dbt_project\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Itumeleng\\.dbt', 'use_colors': 'False', 'cache_selected_only': 'False', 'target_path': 'None'}
+16:18:05.006012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194056A4C30>]}
+16:18:05.131477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001940744B240>]}
+16:18:05.132740 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+16:18:05.538890 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+16:18:05.682815 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+16:18:05.683283 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+16:18:05.716068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194073B9850>]}
+16:18:05.786245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019407815040>]}
+16:18:05.786852 [info ] [MainThread]: Found 1 model, 447 macros
+16:18:05.787286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019407832270>]}
+16:18:05.790319 [info ] [MainThread]: 
+16:18:05.790902 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+16:18:05.791664 [info ] [MainThread]: 
+16:18:05.792394 [debug] [MainThread]: Acquiring new postgres connection 'master'
+16:18:05.793716 [debug] [ThreadPool]: Acquiring new postgres connection 'list_bank_analytics_analytics'
+16:18:06.076637 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+16:18:06.077175 [debug] [ThreadPool]: On list_bank_analytics_analytics: BEGIN
+16:18:06.077529 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:18:06.253696 [debug] [ThreadPool]: SQL status: BEGIN in 0.176 seconds
+16:18:06.254209 [debug] [ThreadPool]: Using postgres connection "list_bank_analytics_analytics"
+16:18:06.254633 [debug] [ThreadPool]: On list_bank_analytics_analytics: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "list_bank_analytics_analytics"} */
+select
+      'bank_analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'bank_analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+16:18:06.358932 [debug] [ThreadPool]: SQL status: SELECT 10 in 0.104 seconds
+16:18:06.360921 [debug] [ThreadPool]: On list_bank_analytics_analytics: ROLLBACK
+16:18:06.363584 [debug] [ThreadPool]: On list_bank_analytics_analytics: Close
+16:18:06.371676 [debug] [MainThread]: Using postgres connection "master"
+16:18:06.372167 [debug] [MainThread]: On master: BEGIN
+16:18:06.372516 [debug] [MainThread]: Opening a new connection, currently in state init
+16:18:06.442778 [debug] [MainThread]: SQL status: BEGIN in 0.070 seconds
+16:18:06.443283 [debug] [MainThread]: Using postgres connection "master"
+16:18:06.443765 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+16:18:06.495630 [debug] [MainThread]: SQL status: SELECT 18 in 0.051 seconds
+16:18:06.497625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e765ab2-84e7-463a-863b-b41666ad11bf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019407B99710>]}
+16:18:06.498127 [debug] [MainThread]: On master: ROLLBACK
+16:18:06.498793 [debug] [MainThread]: On master: Close
+16:18:06.507298 [debug] [Thread-1 (]: Began running node model.bank_analytics_dbt.staging__churn
+16:18:06.508685 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.bank_analytics_dbt.staging__churn'
+16:18:06.509357 [debug] [Thread-1 (]: Began compiling node model.bank_analytics_dbt.staging__churn
+16:18:06.518327 [debug] [Thread-1 (]: Writing injected SQL for node "model.bank_analytics_dbt.staging__churn"
+16:18:06.519612 [debug] [Thread-1 (]: Began executing node model.bank_analytics_dbt.staging__churn
+16:18:06.520626 [debug] [Thread-1 (]: Finished running node model.bank_analytics_dbt.staging__churn
+16:18:06.522034 [debug] [MainThread]: Connection 'master' was properly closed.
+16:18:06.522470 [debug] [MainThread]: Connection 'list_bank_analytics_analytics' was properly closed.
+16:18:06.522808 [debug] [MainThread]: Connection 'model.bank_analytics_dbt.staging__churn' was properly closed.
+16:18:06.525119 [debug] [MainThread]: Command end result
+16:18:06.598544 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+16:18:06.601596 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+16:18:06.612206 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\run_results.json
+16:18:06.617784 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+16:18:06.618228 [info ] [MainThread]: Building catalog
+16:18:06.630607 [debug] [ThreadPool]: Acquiring new postgres connection 'bank_analytics.information_schema'
+16:18:06.639809 [debug] [ThreadPool]: Using postgres connection "bank_analytics.information_schema"
+16:18:06.640329 [debug] [ThreadPool]: On bank_analytics.information_schema: BEGIN
+16:18:06.640691 [debug] [ThreadPool]: Opening a new connection, currently in state init
+16:18:06.812719 [debug] [ThreadPool]: SQL status: BEGIN in 0.172 seconds
+16:18:06.813217 [debug] [ThreadPool]: Using postgres connection "bank_analytics.information_schema"
+16:18:06.813688 [debug] [ThreadPool]: On bank_analytics.information_schema: /* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "bank_analytics", "target_name": "dev", "connection_name": "bank_analytics.information_schema"} */
+
+    
+    
+
+    select
+        'bank_analytics' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('analytics') and
+           upper(tbl.relname) = upper('staging__churn')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+16:18:06.850462 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.036 seconds
+16:18:06.853301 [debug] [ThreadPool]: On bank_analytics.information_schema: ROLLBACK
+16:18:06.854173 [debug] [ThreadPool]: On bank_analytics.information_schema: Close
+16:18:06.870190 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\catalog.json
+16:18:06.901298 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\manifest.json
+16:18:06.906238 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\semantic_manifest.json
+16:18:06.906762 [info ] [MainThread]: Catalog written to C:\Users\Itumeleng\Personal Projects\Bank Customer Analytics\dbt_project\target\catalog.json
+16:18:06.908582 [debug] [MainThread]: Command `dbt docs generate` succeeded at 16:18:06.908172 after 2.53 seconds
+16:18:06.909265 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+16:18:06.909737 [debug] [MainThread]: Connection 'bank_analytics.information_schema' was properly closed.
+16:18:06.910333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019407360B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194079BD650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194079BFC20>]}
+16:18:06.910854 [debug] [MainThread]: Flushing usage events
+16:18:10.747445 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dbtToolkitSettings">
+    <option name="dbtModelPaths">
+      <list>
+        <option value="models" />
+      </list>
+    </option>
+    <option name="dbtProject">
+      <map>
+        <entry key="clean-targets">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="config-version">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="model-paths">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="name">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="profile">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="target-path">
+          <value>
+            <Object />
+          </value>
+        </entry>
+        <entry key="version">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="dbtProjectName" value="bank_analytics_dbt" />
+    <option name="dbtProjectsDir" value="$PROJECT_DIR$/dbt_project" />
+    <option name="dbtTargetDir" value="$PROJECT_DIR$/dbt_project/target" />
+    <option name="dbtVersionMajor" value="1" />
+    <option name="dbtVersionMinor" value="10" />
+    <option name="initialSettingsAreSet" value="true" />
+    <option name="settingsDbtProjectDir" value="$PROJECT_DIR$/dbt_project" />
+    <option name="settingsDbtTargetDir" value="$PROJECT_DIR$/dbt_project/target" />
+  </component>
+</project>
