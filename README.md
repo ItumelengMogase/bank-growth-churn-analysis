@@ -16,6 +16,7 @@ Built using **Python**, **SQL**, and **dbt-style transformations**, this case st
 
 ## Repository Structure
 
+```bash
 bank-growth-churn-analysis/
 │
 ├── data/                       # Raw CSVs (excluded from GitHub)
@@ -56,6 +57,7 @@ bank-growth-churn-analysis/
 ├── README.md
 ├── .gitignore
 └── LICENSE
+
 
 ---
 
