@@ -1,4 +1,4 @@
-# Bank Growth & Churn Analysis — Senior Data Analyst Case Study
+# Bank Growth & Churn Analysis — Case Study
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Visuals-brightgreen)
@@ -8,7 +8,8 @@
 
 ---
 
-**Summary:**  
+**Summary:** 
+
 End-to-end analytics and storytelling project exploring **user acquisition, engagement, churn, and LTV:CAC performance** for a digital bank.  
 Built using **Python**, **SQL**, and **dbt-style transformations**, this case study highlights data storytelling, pipeline design, and metric-driven insight generation.
 
