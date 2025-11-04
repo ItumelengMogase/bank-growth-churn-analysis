@@ -14,52 +14,6 @@ Built using **Python**, **SQL**, and **dbt-style transformations**, this case st
 
 ---
 
-## Repository Structure
-
-```bash
-bank-growth-churn-analysis/
-│
-├── data/                       # Raw CSVs (excluded from GitHub)
-│   ├── user_acquisition.csv
-│   ├── user_activity.csv
-│   ├── transactions.csv
-│   └── churn.csv
-│
-├── sql/                        # SQL models
-│   ├── 01_context_setup.sql
-│   ├── 02_choose_appropriate_visuals.sql
-│   ├── 03_eliminate_clutter.sql
-│   ├── 04_focus_attention.sql
-│   ├── cac_conversion_by_channel.sql
-│   ├── churn_composition_dormant_by_channel.sql
-│   ├── executive_numbers.sql
-│   ├── ltv_proxy.sql
-│   ├── ltv_by_channel_user_level.sql
-│   ├── monthly_churn.sql
-│   └── staging__churn.sql
-│
-├── visuals/                    # Generated dashboards
-│   ├── 01_churn_crisis.html
-│   ├── 02_channel_performance.html
-│   ├── 03_ltv_cac_ratio.html
-│   ├── 04_growth_vs_engagement.html
-│   └── executive summary.pptx
-│
-├── scripts/                    # Python scripts
-│   ├── storytelling_visuals.pystorytelling_visuals.py
-│   └── load_data.py
-│
-├── notebooks/                  # Optional exploratory analysis
-│   └── analysis.ipynb
-│
-├── dbt_project.yml             # dbt configuration file
-├── requirements.txt
-├── README.md
-├── .gitignore
-└── LICENSE
-
-
----
 
 ## Setup Instructions
 
