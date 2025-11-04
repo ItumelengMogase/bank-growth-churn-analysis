@@ -14,9 +14,8 @@ Built using **Python**, **SQL**, and **dbt-style transformations**, this case st
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 
-```bash
 bank-growth-churn-analysis/
 │
 ├── data/                       # Raw CSVs (excluded from GitHub)
@@ -66,37 +65,36 @@ bank-growth-churn-analysis/
 ```bash
 git clone https://github.com/<your-username>/bank-growth-churn-analysis.git
 cd bank-growth-churn-analysis
-````
+
 
 ### Create and activate a virtual environment
 
-```bash
+
 python -m venv .venv
 source .venv/bin/activate         # macOS / Linux
 # .venv\Scripts\activate          # Windows PowerShell
-```
+
 
 ### Install dependencies
 
-```bash
+
 pip install -r requirements.txt
-```
+
 
 ### Add your CSV data files
 
-```
+
 data/
 ├── user_acquisition.csv
 ├── user_activity.csv
 ├── transactions.csv
 └── churn.csv
-```
+
 
 ### Run the main analysis
 
-```bash
 python scripts/storytelling_visuals.pystorytelling_visuals.py
-```
+
 
 ---
 
