@@ -1,0 +1,9 @@
+name: bank_analytics_dbt
+version: '1.0'
+config-version: 2
+
+profile: bank_analytics
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
